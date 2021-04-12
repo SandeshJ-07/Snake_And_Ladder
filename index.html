@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='style.css'>
+    <title>Snake And Ladders</title>
+</head>
+
+<body>
+    <div class="box none">
+        <div class="box1">
+            <canvas id='myCanvas'>Your Browser Doesn't Support Canvas</canvas>
+            <img src="Images/snake1.png" alt="snake1" id='snake1'>
+            <img src="Images/snake2.png" alt="snake2" id='snake2'>
+            <img src="Images/snake3.png" alt="snake3" id='snake3'>
+            <img src='Images/ladder3.png' alt='ladder1' id="ladder1">
+            <img src='Images/ladder1.png' alt='ladder1' id="ladder3">
+            <img src='Images/ladder1.png' alt='ladder1' id="ladder2">
+        </div>
+        <div class="box2">
+            <div>
+                <img src='Images/Dice1.png' id="dice" alt='Dice1' class='dices'><br>
+                <button onclick='play()' class="btn" id='buttn'>Roll Dice</button>
+            </div>
+            <div class="figures">
+                <figure class='none' id='fig1'>
+                    <img src='Images/player1.png'>
+                    <figcaption>Player 1</figcaption>
+                </figure>
+                <figure class='none' id='fig2'>
+                    <img src='Images/player2.png'>
+                    <figcaption>Player 2</figcaption>
+                </figure>
+            </div>
+            <div class="figures">
+                <figure class='none' id='fig3'>
+                    <img src='Images/player3.png'>
+                    <figcaption>Player 3</figcaption>
+                </figure>
+                <figure class='none' id='fig4'>
+                    <img src='Images/player4.png'>
+                    <figcaption>Player 4</figcaption>
+                </figure>
+            </div>
+            <b>Turn Of Player:</b><span id='turnof'></span><br><br>
+            <div><img src="Images/player1.png" id='player1' alt="p1" class="player none">
+                <img src="Images/player2.png" id='player2' alt="p2" class="none player ">
+                <img src="Images/player3.png" id='player3' alt="p3" class="none player ">
+                <img src="Images/player4.png" id='player4' alt="p4" class="none player">
+            </div>
+            <div class="leader">
+                <center>
+                    <div style='background-color: black; color:white;'>LeaderBoard</div>
+                </center>
+                <div class="w1 none">Winner 1: <span id="win1">--</span></div>
+                <div class="w2 none">Winner 2: <span id="win2">--</span></div>
+                <div class="w3 none">Winner 3: <span id="win3">--</span></div>
+                <div class='lose'>Lost: <span id='lost'>--</span> </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='script1.js'>
+    </script>
+</body>
+
+</html>
