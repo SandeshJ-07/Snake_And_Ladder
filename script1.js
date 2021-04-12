@@ -1,8 +1,8 @@
 var players_num = null;
 while (true) {
     players_num = prompt("Enter Number Of Players");
-    if (players_num > 4) {
-        alert("Number of Players Should be less than 5");
+    if (!(players_num==1||players_num==2||players_num==3||players_num==4)) {
+        alert("Number of Players Should be less than 5 or valid value");
     }
     else if (players_num.trim() == "") {
         continue;
