@@ -90,6 +90,22 @@ function roll() {
     document.getElementById("dice").src = str;
     return val;
 }
+function next() {
+    play_num++;
+    if (play_num >= players.length) {
+        play_num = 0;
+    }
+    if (players[play_num].won == true) {
+        next();
+    }
+}
+function turn(play_num) {
+    t = play_num;
+    t++;
+    if (t >= players.length) { t = 0; }
+    if (players[t].won == true) { turn(t); }
+    document.getElementById("turnof").innerText = t;
+}
 
 var play_num = 0, t = 1;
 document.getElementById("turnof").innerText = 1;
@@ -152,20 +168,4 @@ function play() {
     if (end == false) {
         next();
     }
-}
-function next() {
-    play_num++;
-    if (play_num >= players.length) {
-        play_num = 0;
-    }
-    if (players[play_num].won == true) {
-        next();
-    }
-}
-function turn(play_num) {
-    t = play_num;
-    t++;
-    if (t >= players.length) { t = 0; }
-    if (players[t].won == true) { turn(t); }
-    document.getElementById("turnof").innerText = t;
 }
